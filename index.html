@@ -66,6 +66,86 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-从删库到跑路by张馨月" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/19/从删库到跑路by张馨月/" class="article-date">
+  <time datetime="2018-10-19T13:00:24.537Z" itemprop="datePublished">2018-10-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="从删库到跑路By张馨月"><a href="#从删库到跑路By张馨月" class="headerlink" title="从删库到跑路By张馨月"></a>从删库到跑路By张馨月</h1><p> ——MySQL建库删库之旅</p>
+<p><a href="https://www.mysql.com/" title="MySQL" target="_blank" rel="noopener">MySQL</a></p>
+<p>在官网中点击DOWNLOADS—Community，下载社区版MySQL8.0.12。</p>
+<p><img src="https://i.imgur.com/1saVVbx.png" alt=""></p>
+<p>安装完成</p>
+<p>然后准备开始建数据库</p>
+<p>先看一看技术部的过程要求<br><img src="https://i.imgur.com/KCBPETB.png" alt=""></p>
+<p><img src="http://img02.sogoucdn.com/app/a/100520021/D9825FDDE02F15194ACE5F6035C9D418" alt=""></p>
+<p>虽然不是太懂，不过我刚刚下载下来的东西里有一个就叫MySQLWorkbench，不能用这个建表就说明有伏笔。</p>
+<h2 id=""><a href="#" class="headerlink" title=" "></a> </h2><h1 id="数据库的建立"><a href="#数据库的建立" class="headerlink" title="数据库的建立"></a>数据库的建立</h1><p>先定一个小目标，按照教程建立一个CMS的数据库吧</p>
+<p><a href="https://jingyan.baidu.com/article/a3761b2bbf242b1576f9aa0c.html" target="_blank" rel="noopener">如何用Mysql的命令行客户端创建数据库</a></p>
+<p>（未经许可转载，作者可联系我删除）</p>
+<p><img src="https://i.imgur.com/YJwzBZO.png" alt=""></p>
+<p>好像是版本与语法不对应，而网上的教程大多是5.6版本的，决定把当前版本卸载重装。（重装后是8.0.11版）</p>
+<p>这一次，我更换了一个教程，因为之前无论怎么试都失败了（大家可以看看我上一张图里，看看错误在哪儿。这么低级的错误一定不要犯）</p>
+<h2 id="-1"><a href="#-1" class="headerlink" title="#"></a>#</h2><p><a href="http://blog.sina.com.cn/s/blog_83b5069901019qg5.html" target="_blank" rel="noopener">mysql通过命令创建数据库，创建并操作表</a></p>
+<p>这个教程里包含了创造数据库以及操作表的详细步骤，简单易读，也没有使用MySQLWorkbench。推荐（未经许可引用，作者可联系我删除）</p>
+<p><img src="https://i.imgur.com/SlukeIt.png" alt=""></p>
+<p>可以看到，我第一次还是输错了，第二次照着教程走，一次成功。</p>
+<h2 id="-2"><a href="#-2" class="headerlink" title="#"></a>#</h2><h1 id="创建数据库表"><a href="#创建数据库表" class="headerlink" title="创建数据库表"></a>创建数据库表</h1><h1 id="用户信息表"><a href="#用户信息表" class="headerlink" title="用户信息表"></a>用户信息表</h1><p>使用代码</p>
+<pre><code>create table &quot;name&quot; (sorts char());
+</code></pre><p><img src="https://i.imgur.com/Zea6unC.png" alt=""></p>
+<p>创建成功后可以查看一下是否创建成功、数据表格式如何</p>
+<pre><code>show tables;
+describe &quot;name&quot;;
+</code></pre><p><img src="https://i.imgur.com/HINkqwX.png" alt=""></p>
+<p><img src="https://i.imgur.com/kLHTqoX.png" alt=""></p>
+<p>在这里换行时忘记查看教程，以为是因为没有输入“;”导致了第一次的错误。改正错误后输入数据成功。</p>
+<p><img src="https://i.imgur.com/PfgAcKW.png" alt=""></p>
+<p>输入了乔布斯和神座出流的数据（不打码了，为什么我上一张要打码）~因为出流的出生年未知，我本打算用xxxx代替，不过MySQL在这里是严格按照日期审核的，不允许输入xxxx。</p>
+<p>随后尝试了一下教程里的用文件一次性输入，不过失败了。（等我把这篇博客写完再去找原因）<br><img src="https://i.imgur.com/0JoCsE0.png" alt=""></p>
+<h2 id="-3"><a href="#-3" class="headerlink" title="#"></a>#</h2><h1 id="文章信息表"><a href="#文章信息表" class="headerlink" title="文章信息表"></a>文章信息表</h1><p>为了做这一板块，参考了一下第一次博客中自带的文章属性分类<br>，分为layout、 title、 date、 tags</p>
+<p><img src="https://i.imgur.com/OR5PvVt.png" alt=""><br>（两次见证我的手癌与脑癌）</p>
+<p>同样按照教程中的方式，创建好文章信息表后，开始导入信息。企图用一些中文的文章名，不可以；企图在日期后加上时间点，不可以；文章分类用汉字，不可以。<br><img src="https://i.imgur.com/oARPFAQ.png" alt=""></p>
+<p><img src="https://i.imgur.com/FVkwha9.png" alt=""></p>
+<p>修正过后，文章信息也成功导入啦。</p>
+<p><img src="https://i.imgur.com/Pv3H1aW.png" alt=""></p>
+<h2 id="-4"><a href="#-4" class="headerlink" title="#"></a>#</h2><h1 id="用户权限"><a href="#用户权限" class="headerlink" title="用户权限"></a>用户权限</h1><p>为了做这一板块，百度了一下，应该具备的是用户名、角色和权限。</p>
+<p><img src="https://i.imgur.com/d6GQNWc.png" alt=""></p>
+<p>其中character可能与MySQL中的语言重复了，不允许这样使用。</p>
+<p><img src="https://i.imgur.com/FU7pytR.png" alt=""></p>
+<p>然后上传用户信息，建表完成~</p>
+<h2 id="-5"><a href="#-5" class="headerlink" title="#"></a>#</h2><p>#尾声——跑路#</p>
+<p>重头戏终于来了</p>
+<p><img src="https://i.imgur.com/YwKRyie.png" alt=""></p>
+<p><img src="https://i.imgur.com/k8dn4h3.png" alt=""></p>
+<p>先来看看我们创建好的数据库中的表格，一共有用户信息、文章信息以及用户权限三个表格。</p>
+<p>使用代码</p>
+<pre><code>drop database baidu;
+</code></pre><p>检查一下是否删除成功</p>
+<pre><code>use baidu;
+</code></pre><p><img src="https://i.imgur.com/waGpHS5.png" alt=""></p>
+<p>跑路了~~~</p>
+<p>感谢观看<br>2018年10月20日 @张馨月  出品</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/19/从删库到跑路by张馨月/" data-id="cjni5yfyi00042cw3muzrgdob" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="[page]-Hexo博客搭建过程by张馨月" class="article article-type-[page]" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/10/15/Hexo博客搭建过程by张馨月/" class="article-date">
@@ -172,11 +252,37 @@ The file will have its original line endings in your working directory.
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/15/Hexo博客搭建过程by张馨月/" data-id="cjnbw0jhd0000iww3z7iaw262" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/15/Hexo博客搭建过程by张馨月/" data-id="cjni5yfvq00012cw3m4i9p3dr" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
 
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-blog/README" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/10/15/blog/README/" class="article-date">
+  <time datetime="2018-10-15T11:29:34.808Z" itemprop="datePublished">2018-10-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="blog"><a href="#blog" class="headerlink" title="blog"></a>blog</h1>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/10/15/blog/README/" data-id="cjni5yfyt00052cw3kuj98vs6" class="article-share-link">Share</a>
+      
+      
     </footer>
   </div>
   
@@ -219,7 +325,7 @@ The file will have its original line endings in your working directory.
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/15/hello-world/" data-id="cjnbw0jin0003iww3j0ovx227" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/10/15/hello-world/" data-id="cjni5yfv600002cw3oq4fwmob" class="article-share-link">Share</a>
       
       
     </footer>
@@ -274,7 +380,15 @@ The file will have its original line endings in your working directory.
       <ul>
         
           <li>
+            <a href="/2018/10/19/从删库到跑路by张馨月/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2018/10/15/Hexo博客搭建过程by张馨月/">Hexo博客搭建过程by张馨月</a>
+          </li>
+        
+          <li>
+            <a href="/2018/10/15/blog/README/">(no title)</a>
           </li>
         
           <li>
