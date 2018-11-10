@@ -1,117 +1,166 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
 
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
   
-  <title>Hexo博客搭建过程by张馨月 | Cara&#39;s little Zone</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言 技术部试题：此为本人的Hexo博客的搭建过程，耗时超过6个小时，从typecho到华为云Wordpress再到Hexo，一路波折终于搭建成功啦。简单发图片回顾一下过程(注：有参考许多教程，Windows系统) 过程# typecho试着安装了PHP与SQLite,发现自己不会安装扩展，无奈放弃。  .   WordPress在网上搜到了一个华为云WordPress，注册并实名认证后发觉大事不">
-<meta name="keywords" content="blog">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hexo博客搭建过程by张馨月">
-<meta property="og:url" content="http://yoursite.com/2018/10/15/Hexo博客搭建过程by张馨月/index.html">
-<meta property="og:site_name" content="Cara&#39;s little Zone">
-<meta property="og:description" content="前言 技术部试题：此为本人的Hexo博客的搭建过程，耗时超过6个小时，从typecho到华为云Wordpress再到Hexo，一路波折终于搭建成功啦。简单发图片回顾一下过程(注：有参考许多教程，Windows系统) 过程# typecho试着安装了PHP与SQLite,发现自己不会安装扩展，无奈放弃。  .   WordPress在网上搜到了一个华为云WordPress，注册并实名认证后发觉大事不">
-<meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https://i.imgur.com/oP8Zhy9.png">
-<meta property="og:image" content="https://i.imgur.com/DdkpYGd.png">
-<meta property="og:image" content="https://i.imgur.com/H056p6K.jpg">
-<meta property="og:image" content="https://i.imgur.com/Eb3fmbw.png">
-<meta property="og:image" content="https://i.imgur.com/CGrQsDW.png">
-<meta property="og:image" content="https://i.imgur.com/zExB0nR.png">
-<meta property="og:image" content="https://i.imgur.com/WBkronC.png">
-<meta property="og:image" content="https://i.imgur.com/7tnL4Jm.png">
-<meta property="og:image" content="https://i.imgur.com/pexakvG.png">
-<meta property="og:image" content="https://i.imgur.com/5feOHXp.png">
-<meta property="og:image" content="https://i.imgur.com/4cR0lpp.png">
-<meta property="og:image" content="https://i.imgur.com/OPFJwgT.png">
-<meta property="og:image" content="https://i.imgur.com/nZH9elw.png">
-<meta property="og:image" content="https://i.imgur.com/EK7NMUy.png">
-<meta property="og:image" content="https://i.imgur.com/Q324bUc.png">
-<meta property="og:image" content="https://i.imgur.com/LU1lSKI.png">
-<meta property="og:image" content="https://i.imgur.com/B2r4nJJ.png">
-<meta property="og:image" content="https://i.imgur.com/mDggUlH.png">
-<meta property="og:image" content="https://i.imgur.com/ZaXyHSI.png">
-<meta property="og:updated_time" content="2018-10-16T15:33:15.992Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo博客搭建过程by张馨月">
-<meta name="twitter:description" content="前言 技术部试题：此为本人的Hexo博客的搭建过程，耗时超过6个小时，从typecho到华为云Wordpress再到Hexo，一路波折终于搭建成功啦。简单发图片回顾一下过程(注：有参考许多教程，Windows系统) 过程# typecho试着安装了PHP与SQLite,发现自己不会安装扩展，无奈放弃。  .   WordPress在网上搜到了一个华为云WordPress，注册并实名认证后发觉大事不">
-<meta name="twitter:image" content="https://i.imgur.com/oP8Zhy9.png">
-  
-    <link rel="alternate" href="/atom.xml" title="Cara&#39;s little Zone" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+    <title>Hexo博客搭建过程by张馨月 | Cara&#39;s little Zone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="Cara">
+    
+    <meta name="description" content="前言
+技术部试题：此为本人的Hexo博客的搭建过程，耗时超过6个小时，从typecho到华为云Wordpress再到Hexo，一路波折终于搭建成功啦。简单发图片回顾一下过程(注：有参考许多教程，Windows系统)
+过程#
+typecho试着安装了PHP与SQLite,发现自己不会安装扩展，无奈放弃。
+
+. 
+
+WordPress在网上搜到了一个华为云WordPress，注册并实名认证后发觉大事不妙(?!)，这不像是个博客反倒像个交易平台啊，于是赶紧换到了hexo
+  （第二天有北京客服给我打电话询问我注册是否需要什么服务，请慎重对待）
+
+
+hexohexo 的官网内有大部分的安装教程。
+引用自hexo官网
+此后才是正戏（误
+
+参照了几份教程（未经允许不能把人家的网址发上来，大家自己搜索一下吧）。
+
+在部分教程中代码为：
+$ npm install hexo-cli -g
+为了防止后续可能出现的错误，接着运行：
+$ npm install hexo-deployer-git --save
+接下来回到hexo文件夹（这个文件夹是自己建的，里面是空的，不是直接从网上下载到安装包安装的），鼠标右键，选择Git Bash，执行以下命令，Hexo会自动在该文件夹下下载搭建网站所需的所有文件。
+
+顺便求解一下这个问题，因为我安装了过后看见教程说最好不要在中文路径下，就把安装文件改成了Installation Documents,中途遇见bug，把Git直接放进了回收站里，再重新运行安装包（为了省流量没有重新下载），发现还是安装在中文路径下，不过仍然能使用。
+本地浏览：http://localhost:4000/
+注册Github账号接着注册一个Github的账号，进入https://github.com/进行注册，用户名、邮箱和密码之后都需要用到，一定要记好。
+创建repository
+如图，点击New创建，名称格式一定要为yourname.github.io注意：此处的yourname必须为你的github用户名，用户名是可以用来登陆的。
+
+敲重点！！一定记得在冒号后面打上一个空格！！
+
+是不是看上去很容易？别忘了还有一个ssh文件的配置。大概操作就是：
+
+任意地方鼠标右键，打开Git Bash
+
+$ ssh-keygen -t rsa -C &amp;quot;your_email@youremail.com&amp;quot;
+把示例中的邮箱改为在Github注册的邮箱，然后一路回车。（有出现一串方框样式的代码就成功啦）
+
+（描述起来太多了请允许我偷一下懒）
+#
+（我的一些安装过程）（成功在本地浏览到我将来的博客初貌）
+##花费我大半时间的地方其实在最后部分，当时教程里一个$hexo d就可以完成本地到Git的上传时我以为终于要完了，没想到这只是个开始。下面是各种遇到的问题及供参考的解决方法：
+##
+搭建 hexo，在执行 hexo deploy 后,出现 error deployer not found:github 的错误
+
+1.
+还记得太古的_config.yml的编辑么？据说deploy的type 的github需要改成git（虽然我找到的教程并没出现这个问题）之所以提到这点是因为
+$npm install hexo-deployer-git --save
+这段代码非常管用，因为我第一次忘记在冒号后加上空格导致出错，修改之后执行这段代码就能解决。
+#2.运行$hexo d
+INFO  Deploying: git
+INFO  Clearing .deploy_git folder...
+INFO  Copying files from public folder...
+warning: LF will be replaced by CRLF in 2016/10/26/hello-world/index.html.
+The file will have its original line endings in your working directory.
+warning: LF will be replaced by CRLF in archives/2016/10/index.html.
+The file will have its original line endings in your working directory.
+这是一段在网上复制的代码，我当时忘记截图了，大概就是出现了很多warning，上传至Git失败了。
+方法
+一、删除你hexo 下面的.deploy_git文件夹 
+二、运行 
+#3.&amp;gt; please make sure you have the correct access rights
+
+因为前面种种bug让我怀疑自己的ssh是不是配置失败了（注意：Github里有两个settings，界面是不一样的）我一开始没有找到SSH and GPG keys，而是找到了Deploy keys
+
+其实在这里配置ssh也可以正常使用，因为我在这里配置后到SSH and GPG keys处配置时提示key is already in ues.之类的话
+正确的地点是点击右上角头像旁的箭头
+点击settings
+
+点击New SSH key，进行配置
+#到此我的hexo博客就搭建成功啦，成功打开自己的主页的这一刻还是很开心的，不过接下来编辑第一篇文章还是有一点难度（因为不像微博什么的直接在现有的页面上编辑），需要创建新的文件，并且下载文本编辑软件进行内容的编写。
+$hexo n&amp;quot;Hexo博客搭载过程by张馨月&amp;quot;
+然后下载MarkdownPad
+此后会报错，根据弹框提示下载一个awesomium就可以开始编写你的文章啦！
+谢谢你阅读我的分享！
+18年10月16日   writed by 张馨月">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
 </head>
+</html>
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="Cara&#39;s little Zone" title="Cara&#39;s little Zone"></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Cara&#39;s little Zone">Cara&#39;s little Zone</a></h1>
+				<h2 class="blog-motto">What doesn&#39;t kill you makes you stronger</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索">
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Cara&#39;s little Zone</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">What doesn&#39;t kill you makes you stronger</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
+    </header>
+    <div id="container">
+      <div id="main" class="[page]" itemscope="" itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/10/15/Hexo博客搭建过程by张馨月/" title="Hexo博客搭建过程by张馨月" itemprop="url">Hexo博客搭建过程by张馨月</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://yoursite.com" title="Cara">Cara</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2018-10-15T12:52:19.000Z" itemprop="datePublished">2018-10-15</time>
+    更新日期:<time datetime="2018-10-16T15:33:15.992Z" itemprop="dateModified">2018-10-16</time>
+    
+  </p>
 </header>
-      <div class="outer">
-        <section id="main"><article id="[page]-Hexo博客搭建过程by张馨月" class="article article-type-[page]" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/15/Hexo博客搭建过程by张馨月/" class="article-date">
-  <time datetime="2018-10-15T12:52:19.000Z" itemprop="datePublished">2018-10-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Hexo博客搭建过程by张馨月
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><img src="https://i.imgur.com/oP8Zhy9.png" alt=""></p>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#过程"><span class="toc-number">2.</span> <span class="toc-text">过程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-number">2.1.</span> <span class="toc-text">#</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo"><span class="toc-number">2.2.</span> <span class="toc-text">hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#注册Github账号"><span class="toc-number">2.3.</span> <span class="toc-text">注册Github账号</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#创建repository"><span class="toc-number">2.4.</span> <span class="toc-text">创建repository</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-1"><span class="toc-number">2.5.</span> <span class="toc-text">#</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-2"><span class="toc-number">2.6.</span> <span class="toc-text">#</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-3"><span class="toc-number">2.7.</span> <span class="toc-text">#</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-4"><span class="toc-number">2.8.</span> <span class="toc-text">#</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-5"><span class="toc-number">2.9.</span> <span class="toc-text">#</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-6"><span class="toc-number">2.10.</span> <span class="toc-text">#</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-7"><span class="toc-number">2.11.</span> <span class="toc-text">#</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-8"><span class="toc-number">2.12.</span> <span class="toc-text">#</span></a></li></ol></li></ol>
+		</div>
+		
+		<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><img src="https://i.imgur.com/oP8Zhy9.png" alt=""></p>
 <p>技术部试题：此为本人的Hexo博客的搭建过程，耗时超过6个小时，从typecho到华为云Wordpress再到Hexo，一路波折终于搭建成功啦。简单发图片回顾一下过程(注：有参考许多教程，Windows系统)</p>
 <h1 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h1><h2 id=""><a href="#" class="headerlink" title="#"></a>#</h2><ul>
 <li>typecho<br><img src="https://i.imgur.com/DdkpYGd.png" alt=""><br>试着安装了PHP与SQLite,发现自己不会安装扩展，无奈放弃。</li>
@@ -187,137 +236,183 @@ The file will have its original line endings in your working directory.
 <p>此后会报错，根据弹框提示下载一个awesomium就可以开始编写你的文章啦！</p>
 <p>谢谢你阅读我的分享！</p>
 <p>18年10月16日   writed by 张馨月</p>
-<a id="more"></a>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/15/Hexo博客搭建过程by张馨月/" data-id="cjni5z3pc0000fow3bnhg8glw" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
+<a id="more"></a>  
+	</div>
+		<footer class="article-footer clearfix">
 
-    </footer>
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/blog/">blog</a>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2018/10/19/从删库到跑路by张馨月/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/10/15/blog/README/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title"></div>
-    </a>
-  
+
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://yoursite.com/2018/10/15/Hexo博客搭建过程by张馨月/" data-title="Hexo博客搭建过程by张馨月 | Cara&#39;s little Zone" data-tsina="" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev">
+ <a href="/2018/10/19/从删库到跑路by张馨月/" title="">
+  <strong>PREVIOUS:</strong><br>
+  <span>
+  (no title)</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2018/10/15/blog/README/" title="">
+ <strong>NEXT:</strong><br> 
+ <span>(no title)
+</span>
+</a>
+</div>
+
 </nav>
 
-  
-</article>
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li></ul>
-    </div>
-  </div>
-
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/blog/" style="font-size: 10px;">blog</a>
-    </div>
-  </div>
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li></ul>
-    </div>
-  </div>
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/blog/" title="blog">blog<sup>1</sup></a></li>
+		
+		</ul>
+</div>
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2018/10/19/从删库到跑路by张馨月/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2018/10/15/Hexo博客搭建过程by张馨月/">Hexo博客搭建过程by张馨月</a>
-          </li>
-        
-          <li>
-            <a href="/2018/10/15/blog/README/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2018/10/15/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
+  <div class="rsspart">
+	<a href="" target="_blank" title="rss">RSS 订阅</a>
+</div>
 
-  
 </aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 Cara<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+</div>
     </div>
-  </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font clearfix">
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2018 
+		
+		<a href="http://yoursite.com" target="_blank" title="Cara">Cara</a>
+		
+		</p>
+</div>
 </footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
 
 
 
-  </div>
-</body>
-</html>
+
+
+  </body>
+ </html>

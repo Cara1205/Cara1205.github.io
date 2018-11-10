@@ -1,438 +1,233 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
 
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
   
-  <title>Cara&#39;s little Zone</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Cara&#39;s little Zone">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Cara&#39;s little Zone">
-<meta property="og:locale" content="zh-CN">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Cara&#39;s little Zone">
-  
-    <link rel="alternate" href="/atom.xml" title="Cara&#39;s little Zone" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
+    <title>Cara&#39;s little Zone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="Cara">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Cara&#39;s little Zone</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">What doesn&#39;t kill you makes you stronger</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-从删库到跑路by张馨月" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/19/从删库到跑路by张馨月/" class="article-date">
-  <time datetime="2018-10-19T13:00:24.537Z" itemprop="datePublished">2018-10-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="从删库到跑路By张馨月"><a href="#从删库到跑路By张馨月" class="headerlink" title="从删库到跑路By张馨月"></a>从删库到跑路By张馨月</h1><p> ——MySQL建库删库之旅</p>
-<p><a href="https://www.mysql.com/" title="MySQL" target="_blank" rel="noopener">MySQL</a></p>
-<p>在官网中点击DOWNLOADS—Community，下载社区版MySQL8.0.12。</p>
-<p><img src="https://i.imgur.com/1saVVbx.png" alt=""></p>
-<p>安装完成</p>
-<p>然后准备开始建数据库</p>
-<p>先看一看技术部的过程要求<br><img src="https://i.imgur.com/KCBPETB.png" alt=""></p>
-<p><img src="http://img02.sogoucdn.com/app/a/100520021/D9825FDDE02F15194ACE5F6035C9D418" alt=""></p>
-<p>虽然不是太懂，不过我刚刚下载下来的东西里有一个就叫MySQLWorkbench，不能用这个建表就说明有伏笔。</p>
-<h2 id=""><a href="#" class="headerlink" title=" "></a> </h2><h1 id="数据库的建立"><a href="#数据库的建立" class="headerlink" title="数据库的建立"></a>数据库的建立</h1><p>先定一个小目标，按照教程建立一个CMS的数据库吧</p>
-<p><a href="https://jingyan.baidu.com/article/a3761b2bbf242b1576f9aa0c.html" target="_blank" rel="noopener">如何用Mysql的命令行客户端创建数据库</a></p>
-<p>（未经许可转载，作者可联系我删除）</p>
-<p><img src="https://i.imgur.com/YJwzBZO.png" alt=""></p>
-<p>好像是版本与语法不对应，而网上的教程大多是5.6版本的，决定把当前版本卸载重装。（重装后是8.0.11版）</p>
-<p>这一次，我更换了一个教程，因为之前无论怎么试都失败了（大家可以看看我上一张图里，看看错误在哪儿。这么低级的错误一定不要犯）</p>
-<h2 id="-1"><a href="#-1" class="headerlink" title="#"></a>#</h2><p><a href="http://blog.sina.com.cn/s/blog_83b5069901019qg5.html" target="_blank" rel="noopener">mysql通过命令创建数据库，创建并操作表</a></p>
-<p>这个教程里包含了创造数据库以及操作表的详细步骤，简单易读，也没有使用MySQLWorkbench。推荐（未经许可引用，作者可联系我删除）</p>
-<p><img src="https://i.imgur.com/SlukeIt.png" alt=""></p>
-<p>可以看到，我第一次还是输错了，第二次照着教程走，一次成功。</p>
-<h2 id="-2"><a href="#-2" class="headerlink" title="#"></a>#</h2><h1 id="创建数据库表"><a href="#创建数据库表" class="headerlink" title="创建数据库表"></a>创建数据库表</h1><h1 id="用户信息表"><a href="#用户信息表" class="headerlink" title="用户信息表"></a>用户信息表</h1><p>使用代码</p>
-<pre><code>create table &quot;name&quot; (sorts char());
-</code></pre><p><img src="https://i.imgur.com/Zea6unC.png" alt=""></p>
-<p>创建成功后可以查看一下是否创建成功、数据表格式如何</p>
-<pre><code>show tables;
-describe &quot;name&quot;;
-</code></pre><p><img src="https://i.imgur.com/HINkqwX.png" alt=""></p>
-<p><img src="https://i.imgur.com/kLHTqoX.png" alt=""></p>
-<p>在这里换行时忘记查看教程，以为是因为没有输入“;”导致了第一次的错误。改正错误后输入数据成功。</p>
-<p><img src="https://i.imgur.com/PfgAcKW.png" alt=""></p>
-<p>输入了乔布斯和神座出流的数据（不打码了，为什么我上一张要打码）~因为出流的出生年未知，我本打算用xxxx代替，不过MySQL在这里是严格按照日期审核的，不允许输入xxxx。</p>
-<p>随后尝试了一下教程里的用文件一次性输入，不过失败了。（等我把这篇博客写完再去找原因）<br><img src="https://i.imgur.com/0JoCsE0.png" alt=""></p>
-<h2 id="-3"><a href="#-3" class="headerlink" title="#"></a>#</h2><h1 id="文章信息表"><a href="#文章信息表" class="headerlink" title="文章信息表"></a>文章信息表</h1><p>为了做这一板块，参考了一下第一次博客中自带的文章属性分类<br>，分为layout、 title、 date、 tags</p>
-<p><img src="https://i.imgur.com/OR5PvVt.png" alt=""><br>（两次见证我的手癌与脑癌）</p>
-<p>同样按照教程中的方式，创建好文章信息表后，开始导入信息。企图用一些中文的文章名，不可以；企图在日期后加上时间点，不可以；文章分类用汉字，不可以。<br><img src="https://i.imgur.com/oARPFAQ.png" alt=""></p>
-<p><img src="https://i.imgur.com/FVkwha9.png" alt=""></p>
-<p>修正过后，文章信息也成功导入啦。</p>
-<p><img src="https://i.imgur.com/Pv3H1aW.png" alt=""></p>
-<h2 id="-4"><a href="#-4" class="headerlink" title="#"></a>#</h2><h1 id="用户权限"><a href="#用户权限" class="headerlink" title="用户权限"></a>用户权限</h1><p>为了做这一板块，百度了一下，应该具备的是用户名、角色和权限。</p>
-<p><img src="https://i.imgur.com/d6GQNWc.png" alt=""></p>
-<p>其中character可能与MySQL中的语言重复了，不允许这样使用。</p>
-<p><img src="https://i.imgur.com/FU7pytR.png" alt=""></p>
-<p>然后上传用户信息，建表完成~</p>
-<h2 id="-5"><a href="#-5" class="headerlink" title="#"></a>#</h2><p>#尾声——跑路#</p>
-<p>重头戏终于来了</p>
-<p><img src="https://i.imgur.com/YwKRyie.png" alt=""></p>
-<p><img src="https://i.imgur.com/k8dn4h3.png" alt=""></p>
-<p>先来看看我们创建好的数据库中的表格，一共有用户信息、文章信息以及用户权限三个表格。</p>
-<p>使用代码</p>
-<pre><code>drop database baidu;
-</code></pre><p>检查一下是否删除成功</p>
-<pre><code>use baidu;
-</code></pre><p><img src="https://i.imgur.com/waGpHS5.png" alt=""></p>
-<p>跑路了~~~</p>
-<p>感谢观看<br>2018年10月20日 @张馨月  出品</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/19/从删库到跑路by张馨月/" data-id="cjni5z3qe0001fow3ojlcd1lq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="[page]-Hexo博客搭建过程by张馨月" class="article article-type-[page]" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/15/Hexo博客搭建过程by张馨月/" class="article-date">
-  <time datetime="2018-10-15T12:52:19.000Z" itemprop="datePublished">2018-10-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/15/Hexo博客搭建过程by张馨月/">Hexo博客搭建过程by张馨月</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><img src="https://i.imgur.com/oP8Zhy9.png" alt=""></p>
-<p>技术部试题：此为本人的Hexo博客的搭建过程，耗时超过6个小时，从typecho到华为云Wordpress再到Hexo，一路波折终于搭建成功啦。简单发图片回顾一下过程(注：有参考许多教程，Windows系统)</p>
-<h1 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h1><h2 id=""><a href="#" class="headerlink" title="#"></a>#</h2><ul>
-<li>typecho<br><img src="https://i.imgur.com/DdkpYGd.png" alt=""><br>试着安装了PHP与SQLite,发现自己不会安装扩展，无奈放弃。</li>
-</ul>
-<p>. </p>
-<ul>
-<li><p>WordPress<br><img src="https://i.imgur.com/H056p6K.jpg" alt=""><br>在网上搜到了一个华为云WordPress，注册并实名认证后发觉大事不妙(?!)，这不像是个博客反倒像个交易平台啊<img src="https://i.imgur.com/Eb3fmbw.png" alt="">，于是赶紧换到了hexo</p>
-<p>  （第二天有北京客服给我打电话询问我注册是否需要什么服务，请慎重对待）</p>
-</li>
-</ul>
-<h2 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h2><p><a href="https://hexo.io/zh-cn/" title="hexo" target="_blank" rel="noopener">hexo</a> 的官网内有大部分的安装教程。<br><img src="https://i.imgur.com/CGrQsDW.png" alt=""><br><img src="https://i.imgur.com/zExB0nR.png" alt=""></p>
-<p>引用自hexo官网</p>
-<p>此后才是正戏（误</p>
-<ul>
-<li>参照了几份教程（未经允许不能把人家的网址发上来，大家自己搜索一下吧）。</li>
-</ul>
-<p>在部分教程中代码为：</p>
-<pre><code>$ npm install hexo-cli -g
-</code></pre><p>为了防止后续可能出现的错误，接着运行：</p>
-<pre><code>$ npm install hexo-deployer-git --save
-</code></pre><p>接下来回到hexo文件夹（这个文件夹是自己建的，里面是空的，不是直接从网上下载到安装包安装的），鼠标右键，选择Git Bash，执行以下命令，Hexo会自动在该文件夹下下载搭建网站所需的所有文件。</p>
-<p><img src="https://i.imgur.com/WBkronC.png" alt=""></p>
-<p>顺便求解一下这个问题，因为我安装了过后看见教程说最好不要在中文路径下，就把安装文件改成了Installation Documents,中途遇见bug，把Git直接放进了回收站里，再重新运行安装包（为了省流量没有重新下载），发现还是安装在中文路径下，不过仍然能使用。<br><img src="https://i.imgur.com/7tnL4Jm.png" alt=""></p>
-<p>本地浏览：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a></p>
-<h2 id="注册Github账号"><a href="#注册Github账号" class="headerlink" title="注册Github账号"></a>注册Github账号</h2><p>接着注册一个Github的账号，进入<a href="https://github.com/" title="Github" target="_blank" rel="noopener">https://github.com/</a>进行注册，用户名、邮箱和密码之后都需要用到，一定要记好。</p>
-<h2 id="创建repository"><a href="#创建repository" class="headerlink" title="创建repository"></a>创建repository</h2><p><img src="https://i.imgur.com/pexakvG.png" alt=""></p>
-<p>如图，点击New创建，名称格式一定要为yourname.github.io<br>注意：此处的<strong>yourname</strong>必须为你的github用户名，用户名是可以用来登陆的。</p>
-<p><img src="https://i.imgur.com/5feOHXp.png" alt=""></p>
-<p>敲重点！！一定<strong>记得在冒号后面打上一个空格！！</strong></p>
-<p><img src="https://i.imgur.com/4cR0lpp.png" alt=""></p>
-<p>是不是看上去很容易？别忘了还有一个<strong>ssh文件的配置</strong>。大概操作就是：</p>
-<ol>
-<li>任意地方鼠标右键，打开Git Bash</li>
-</ol>
-<pre><code>$ ssh-keygen -t rsa -C &quot;your_email@youremail.com&quot;
-</code></pre><p>把示例中的邮箱改为在Github注册的邮箱，然后一路回车。（有出现一串方框样式的代码就成功啦）</p>
-<p><img src="https://i.imgur.com/OPFJwgT.png" alt=""></p>
-<p>（描述起来太多了请允许我偷一下懒）</p>
-<h2 id="-1"><a href="#-1" class="headerlink" title="#"></a>#</h2><p><img src="https://i.imgur.com/nZH9elw.png" alt=""></p>
-<p><img src="https://i.imgur.com/EK7NMUy.png" alt=""><br>（我的一些安装过程）<br><img src="https://i.imgur.com/Q324bUc.png" alt=""><br>（成功在本地浏览到我将来的博客初貌）</p>
-<h2 id="-2"><a href="#-2" class="headerlink" title="#"></a>#</h2><h2 id="-3"><a href="#-3" class="headerlink" title="#"></a>#</h2><p>花费我大半时间的地方其实在最后部分，当时教程里一个$hexo d就可以完成本地到Git的上传时我以为终于要完了，没想到这只是个开始。下面是各种遇到的问题及供参考的解决方法：</p>
-<h2 id="-4"><a href="#-4" class="headerlink" title="#"></a>#</h2><h2 id="-5"><a href="#-5" class="headerlink" title="#"></a>#</h2><blockquote>
-<p>搭建 hexo，在执行 hexo deploy 后,出现 error deployer not found:github 的错误</p>
-</blockquote>
-<p><strong>1.</strong></p>
-<p>还记得太古的_config.yml的编辑么？据说deploy的type 的github需要改成git（虽然我找到的教程并没出现这个问题）之所以提到这点是因为</p>
-<p><code>$npm install hexo-deployer-git --save</code></p>
-<p>这段代码非常管用，因为我第一次忘记在冒号后加上空格导致出错，修改之后执行这段代码就能解决。</p>
-<h2 id="-6"><a href="#-6" class="headerlink" title="#"></a>#</h2><p><strong>2.运行$hexo d</strong></p>
-<pre><code>INFO  Deploying: git
-INFO  Clearing .deploy_git folder...
-INFO  Copying files from public folder...
-warning: LF will be replaced by CRLF in 2016/10/26/hello-world/index.html.
-The file will have its original line endings in your working directory.
-warning: LF will be replaced by CRLF in archives/2016/10/index.html.
-The file will have its original line endings in your working directory.
-</code></pre><p>这是一段在网上复制的代码，我当时忘记截图了，大概就是出现了很多warning，上传至Git失败了。</p>
-<p><strong>方法</strong></p>
-<p>一、删除你hexo 下面的.deploy_git文件夹 </p>
-<p>二、运行 </p>
-<h2 id="-7"><a href="#-7" class="headerlink" title="#"></a>#</h2><p><strong>3.</strong><br><strong>&gt; please make sure you have the correct access rights</strong></p>
-<p><img src="https://i.imgur.com/LU1lSKI.png" alt=""></p>
-<p>因为前面种种bug让我怀疑自己的ssh是不是配置失败了（注意：Github里有两个settings，界面是不一样的）我一开始没有找到SSH and GPG keys，而是找到了Deploy keys</p>
-<p><img src="https://i.imgur.com/B2r4nJJ.png" alt=""></p>
-<p>其实在这里配置ssh也可以正常使用，因为我在这里配置后到SSH and GPG keys处配置时提示key is already in ues.之类的话</p>
-<p>正确的地点是点击右上角头像旁的箭头</p>
-<p><img src="https://i.imgur.com/mDggUlH.png" alt=""><br>点击settings</p>
-<p><img src="https://i.imgur.com/ZaXyHSI.png" alt=""></p>
-<p>点击New SSH key，进行配置</p>
-<h2 id="-8"><a href="#-8" class="headerlink" title="#"></a>#</h2><p>到此我的hexo博客就搭建成功啦，成功打开自己的主页的这一刻还是很开心的，不过接下来编辑第一篇文章还是有一点难度（因为不像微博什么的直接在现有的页面上编辑），需要创建新的文件，并且下载文本编辑软件进行内容的编写。</p>
-<pre><code>$hexo n&quot;Hexo博客搭载过程by张馨月&quot;
-</code></pre><p>然后下载<a href="http://markdownpad.com/" title="MarkdownPad" target="_blank" rel="noopener">MarkdownPad</a></p>
-<p>此后会报错，根据弹框提示下载一个awesomium就可以开始编写你的文章啦！</p>
-<p>谢谢你阅读我的分享！</p>
-<p>18年10月16日   writed by 张馨月</p>
-        
-          <p class="article-more-link">
-            <a href="/2018/10/15/Hexo博客搭建过程by张馨月/#more">�Ķ�ȫ��</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/15/Hexo博客搭建过程by张馨月/" data-id="cjni5z3pc0000fow3bnhg8glw" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/">blog</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-blog/README" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/15/blog/README/" class="article-date">
-  <time datetime="2018-10-15T11:29:34.808Z" itemprop="datePublished">2018-10-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="blog"><a href="#blog" class="headerlink" title="blog"></a>blog</h1>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/15/blog/README/" data-id="cjni5z3uq0005fow3nlfk5ygq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/10/15/hello-world/" class="article-date">
-  <time datetime="2018-10-15T10:40:27.044Z" itemprop="datePublished">2018-10-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/10/15/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/10/15/hello-world/" data-id="cjni5z3rj0003fow3tfb2zzea" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
-
-</section>
-        
-          <aside id="sidebar">
-  
-    
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/blog/">blog</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">标签云</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/blog/" style="font-size: 10px;">blog</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/10/">十月 2018</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2018/10/19/从删库到跑路by张馨月/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2018/10/15/Hexo博客搭建过程by张馨月/">Hexo博客搭建过程by张馨月</a>
-          </li>
-        
-          <li>
-            <a href="/2018/10/15/blog/README/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2018/10/15/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2018 Cara<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
-
-  </div>
-</body>
 </html>
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="Cara&#39;s little Zone" title="Cara&#39;s little Zone"></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Cara&#39;s little Zone">Cara&#39;s little Zone</a></h1>
+				<h2 class="blog-motto">What doesn&#39;t kill you makes you stronger</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索">
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main">
+
+  <section class="post" itemscope="" itemprop="blogPost">
+  
+    <a href="/2018/10/19/从删库到跑路by张馨月/" title="" itemprop="url">
+  
+    <h1 itemprop="name"></h1>
+    
+     
+           <p itemprop="description">从删库到跑路By张馨月 ——MySQL建库删库之旅
+MySQL
+在官网中点击DOWNLOADS—Community，下载社区版MySQL8.0.12。
+
+安装完成
+然后准备开始建数据库
+先看一看技术部的过程要求
+
+虽然不是太懂，不过我刚刚下载下来的东西里有一个就叫MySQLWor</p>
+        
+    
+    <time datetime="2018-10-19T13:00:24.537Z" itemprop="datePublished">2018-10-19</time>
+  </a>
+</section>
+
+  <section class="[page]" itemscope="" itemprop="blogPost">
+  
+    <a href="/2018/10/15/Hexo博客搭建过程by张馨月/" title="Hexo博客搭建过程by张馨月" itemprop="url">
+  
+    <h1 itemprop="name">Hexo博客搭建过程by张馨月</h1>
+    
+     
+       <p itemprop="description">前言
+技术部试题：此为本人的Hexo博客的搭建过程，耗时超过6个小时，从typecho到华为云Wordpress再到Hexo，一路波折终于搭建成功啦。简单发图片回顾一下过程(注：有参考许多教程，Windows系统)
+过程#
+typecho试着安装了PHP与SQLite,发现自己不</p>
+      
+    
+    <time datetime="2018-10-15T12:52:19.000Z" itemprop="datePublished">2018-10-15</time>
+  </a>
+</section>
+
+  <section class="post" itemscope="" itemprop="blogPost">
+  
+    <a href="/2018/10/15/blog/README/" title="" itemprop="url">
+  
+    <h1 itemprop="name"></h1>
+    
+     
+           <p itemprop="description">blog</p>
+        
+    
+    <time datetime="2018-10-15T11:29:34.808Z" itemprop="datePublished">2018-10-15</time>
+  </a>
+</section>
+
+  <section class="post" itemscope="" itemprop="blogPost">
+  
+    <a href="/2018/10/15/hello-world/" title="Hello World" itemprop="url">
+  
+    <h1 itemprop="name">Hello World</h1>
+    
+     
+           <p itemprop="description">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the </p>
+        
+    
+    <time datetime="2018-10-15T10:40:27.044Z" itemprop="datePublished">2018-10-15</time>
+  </a>
+</section>
+
+
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/blog/" title="blog">blog<sup>1</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font clearfix">
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2018 
+		
+		<a href="http://yoursite.com" target="_blank" title="Cara">Cara</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+
+
+
+
+
+  </body>
+ </html>
