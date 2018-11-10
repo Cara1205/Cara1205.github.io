@@ -1,0 +1,329 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  
+    <title>从删库到跑路 | Cara&#39;s little Zone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="Cara">
+    
+    <meta name="description" content="从删库到跑路 ——MySQL建库删库之旅
+MySQL
+在官网中点击DOWNLOADS—Community，下载社区版MySQL8.0.12。
+
+安装完成
+然后准备开始建数据库
+先看一看技术部的过程要求
+
+虽然不是太懂，不过我刚刚下载下来的东西里有一个就叫MySQLWorkbench，不能用这个建表就">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="Cara&#39;s little Zone" title="Cara&#39;s little Zone"></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Cara&#39;s little Zone">Cara&#39;s little Zone</a></h1>
+				<h2 class="blog-motto">What doesn&#39;t kill you makes you stronger</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索">
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main" class="[page]" itemscope="" itemprop="blogPost">
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2018/10/20/blog/从删库到跑路(MySQL试用)/" title="从删库到跑路" itemprop="url">从删库到跑路</a>
+  </h1>
+  <p class="article-author">By
+    
+      <a href="http://yoursite.com" title="Cara">Cara</a>
+    </p>
+  <p class="article-time">
+    <time datetime="2018-10-19T16:00:00.000Z" itemprop="datePublished">2018-10-20</time>
+    更新日期:<time datetime="2018-11-10T14:37:08.837Z" itemprop="dateModified">2018-11-10</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#从删库到跑路"><span class="toc-number">1.</span> <span class="toc-text">从删库到跑路</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#"><span class="toc-number">1.1.</span> <span class="toc-text"> </span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#数据库的建立"><span class="toc-number">2.</span> <span class="toc-text">数据库的建立</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#-1"><span class="toc-number">2.1.</span> <span class="toc-text">#</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#-2"><span class="toc-number">2.2.</span> <span class="toc-text">#</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#创建数据库表"><span class="toc-number">3.</span> <span class="toc-text">创建数据库表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#用户信息表"><span class="toc-number">4.</span> <span class="toc-text">用户信息表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#-3"><span class="toc-number">4.1.</span> <span class="toc-text">#</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#文章信息表"><span class="toc-number">5.</span> <span class="toc-text">文章信息表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#-4"><span class="toc-number">5.1.</span> <span class="toc-text">#</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#用户权限"><span class="toc-number">6.</span> <span class="toc-text">用户权限</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#-5"><span class="toc-number">6.1.</span> <span class="toc-text">#</span></a></li></ol></li></ol>
+		</div>
+		
+		<h1 id="从删库到跑路"><a href="#从删库到跑路" class="headerlink" title="从删库到跑路"></a>从删库到跑路</h1><p> ——MySQL建库删库之旅</p>
+<p><a href="https://www.mysql.com/" title="MySQL" target="_blank" rel="noopener">MySQL</a></p>
+<p>在官网中点击DOWNLOADS—Community，下载社区版MySQL8.0.12。</p>
+<p><img src="https://i.imgur.com/1saVVbx.png" alt=""></p>
+<p>安装完成</p>
+<p>然后准备开始建数据库</p>
+<p>先看一看技术部的过程要求<br><img src="https://i.imgur.com/KCBPETB.png" alt=""></p>
+<p><img src="http://img02.sogoucdn.com/app/a/100520021/D9825FDDE02F15194ACE5F6035C9D418" alt=""></p>
+<p>虽然不是太懂，不过我刚刚下载下来的东西里有一个就叫MySQLWorkbench，不能用这个建表就说明有伏笔。</p>
+<h2 id=""><a href="#" class="headerlink" title=" "></a> </h2><h1 id="数据库的建立"><a href="#数据库的建立" class="headerlink" title="数据库的建立"></a>数据库的建立</h1><p>先定一个小目标，按照教程建立一个CMS的数据库吧</p>
+<p><a href="https://jingyan.baidu.com/article/a3761b2bbf242b1576f9aa0c.html" target="_blank" rel="noopener">如何用Mysql的命令行客户端创建数据库</a></p>
+<p>（未经许可转载，作者可联系我删除）</p>
+<p><img src="https://i.imgur.com/YJwzBZO.png" alt=""></p>
+<p>好像是版本与语法不对应，而网上的教程大多是5.6版本的，决定把当前版本卸载重装。（重装后是8.0.11版）</p>
+<p>这一次，我更换了一个教程，因为之前无论怎么试都失败了（大家可以看看我上一张图里，看看错误在哪儿。这么低级的错误一定不要犯）</p>
+<h2 id="-1"><a href="#-1" class="headerlink" title="#"></a>#</h2><p><a href="http://blog.sina.com.cn/s/blog_83b5069901019qg5.html" target="_blank" rel="noopener">mysql通过命令创建数据库，创建并操作表</a></p>
+<p>这个教程里包含了创造数据库以及操作表的详细步骤，简单易读，也没有使用MySQLWorkbench。推荐（未经许可引用，作者可联系我删除）</p>
+<p><img src="https://i.imgur.com/SlukeIt.png" alt=""></p>
+<p>可以看到，我第一次还是输错了，第二次照着教程走，一次成功。</p>
+<h2 id="-2"><a href="#-2" class="headerlink" title="#"></a>#</h2><h1 id="创建数据库表"><a href="#创建数据库表" class="headerlink" title="创建数据库表"></a>创建数据库表</h1><h1 id="用户信息表"><a href="#用户信息表" class="headerlink" title="用户信息表"></a>用户信息表</h1><p>使用代码</p>
+<pre><code>create table &quot;name&quot; (sorts char());
+</code></pre><p><img src="https://i.imgur.com/Zea6unC.png" alt=""></p>
+<p>创建成功后可以查看一下是否创建成功、数据表格式如何</p>
+<pre><code>show tables;
+describe &quot;name&quot;;
+</code></pre><p><img src="https://i.imgur.com/HINkqwX.png" alt=""></p>
+<p><img src="https://i.imgur.com/kLHTqoX.png" alt=""></p>
+<p>在这里换行时忘记查看教程，以为是因为没有输入“;”导致了第一次的错误。改正错误后输入数据成功。</p>
+<p><img src="https://i.imgur.com/PfgAcKW.png" alt=""></p>
+<p>输入了乔布斯和神座出流的数据（不打码了，为什么我上一张要打码）~因为出流的出生年未知，我本打算用xxxx代替，不过MySQL在这里是严格按照日期审核的，不允许输入xxxx。</p>
+<p>随后尝试了一下教程里的用文件一次性输入，不过失败了。（等我把这篇博客写完再去找原因）<br><img src="https://i.imgur.com/0JoCsE0.png" alt=""></p>
+<h2 id="-3"><a href="#-3" class="headerlink" title="#"></a>#</h2><h1 id="文章信息表"><a href="#文章信息表" class="headerlink" title="文章信息表"></a>文章信息表</h1><p>为了做这一板块，参考了一下第一次博客中自带的文章属性分类<br>，分为layout、 title、 date、 tags</p>
+<p><img src="https://i.imgur.com/OR5PvVt.png" alt=""><br>（两次见证我的手癌与脑癌）</p>
+<p>同样按照教程中的方式，创建好文章信息表后，开始导入信息。企图用一些中文的文章名，不可以；企图在日期后加上时间点，不可以；文章分类用汉字，不可以。<br><img src="https://i.imgur.com/oARPFAQ.png" alt=""></p>
+<p><img src="https://i.imgur.com/FVkwha9.png" alt=""></p>
+<p>修正过后，文章信息也成功导入啦。</p>
+<p><img src="https://i.imgur.com/Pv3H1aW.png" alt=""></p>
+<h2 id="-4"><a href="#-4" class="headerlink" title="#"></a>#</h2><h1 id="用户权限"><a href="#用户权限" class="headerlink" title="用户权限"></a>用户权限</h1><p>为了做这一板块，百度了一下，应该具备的是用户名、角色和权限。</p>
+<p><img src="https://i.imgur.com/d6GQNWc.png" alt=""></p>
+<p>其中character可能与MySQL中的语言重复了，不允许这样使用。</p>
+<p><img src="https://i.imgur.com/FU7pytR.png" alt=""></p>
+<p>然后上传用户信息，建表完成~</p>
+<h2 id="-5"><a href="#-5" class="headerlink" title="#"></a>#</h2><p>#尾声——跑路#</p>
+<p>重头戏终于来了</p>
+<p><img src="https://i.imgur.com/YwKRyie.png" alt=""></p>
+<p><img src="https://i.imgur.com/k8dn4h3.png" alt=""></p>
+<p>先来看看我们创建好的数据库中的表格，一共有用户信息、文章信息以及用户权限三个表格。</p>
+<p>使用代码</p>
+<pre><code>drop database baidu;
+</code></pre><p>检查一下是否删除成功</p>
+<pre><code>use baidu;
+</code></pre><p><img src="https://i.imgur.com/waGpHS5.png" alt=""></p>
+<p>跑路了~~~</p>
+<p>感谢观看<br>2018年10月20日 @张馨月  出品</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/blog/">blog</a>
+  </div>
+
+
+
+
+<div class="article-share" id="share">
+
+  <div data-url="http://yoursite.com/2018/10/20/blog/从删库到跑路(MySQL试用)/" data-title="从删库到跑路 | Cara&#39;s little Zone" data-tsina="" class="share clearfix">
+  </div>
+
+</div>
+</footer>   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+ <div class="prev">
+ <a href="/2018/11/10/更换Hexo主题/" title="更换hexo主题">
+  <strong>PREVIOUS:</strong><br>
+  <span>
+  更换hexo主题</span>
+</a>
+</div>
+
+
+<div class="next">
+<a href="/2018/10/15/blog/Hexo博客搭建/" title="Hexo博客搭建过程">
+ <strong>NEXT:</strong><br> 
+ <span>Hexo博客搭建过程
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			<li><a href="/tags/blog/" title="blog">blog<sup>3</sup></a></li>
+		
+		</ul>
+</div>
+
+
+  <div class="rsspart">
+	<a href="" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer">
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font clearfix">
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2018 
+		
+		<a href="http://yoursite.com" target="_blank" title="Cara">Cara</a>
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      h  = $('article h2')
+      ah = $('article h2'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  if(ah.length==0){
+    t.css('display','none');
+  }else{
+    c.click(function(){
+      ta.css('display', 'block').addClass('fadeIn');
+    });
+    o.click(function(){
+      ta.css('display', 'none');
+    });
+    $(window).scroll(function(){
+      ta.css("top",Math.max(140,320-$(this).scrollTop()));
+    });
+  };
+});
+</script>
+
+
+
+
+
+
+
+  </body>
+ </html>
